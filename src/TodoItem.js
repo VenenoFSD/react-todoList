@@ -12,7 +12,7 @@ class TodoItem extends Component{
     handleDelete(index);
   }
 
-  render() {
+  render () {
     const {content} = this.props;
     return(
       <li onClick={this.handleClick}>{content}</li>
@@ -23,4 +23,4 @@ class TodoItem extends Component{
 export default TodoItem
 
 // note
-// 子组件向父组件传值：父组件传函数给子组件调用，子组件通过这个函数传值给父组件
+// 子组件向父组件传值：父组件传函数给子组件调用（先绑定this再传），子组件通过这个函数传值给父组件
