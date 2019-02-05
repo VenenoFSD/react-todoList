@@ -15,10 +15,14 @@ class TodoList extends Component {
   }
 
   handleBtnClick () {
-    this.setState({
-      list: [...this.state.list, this.state.input],
+    // this.setState({
+    //   list: [...this.state.list, this.state.input],
+    //   input: ''
+    // });
+    this.setState(prevState => ({
+      list: [...prevState.list, prevState.input],
       input: ''
-    });
+    }))
   }
 
   handleInput (e) {
@@ -28,11 +32,18 @@ class TodoList extends Component {
   }
 
   handleDelete (index) {
-    const list = [...this.state.list];
-    list.splice(index, 1);
-    this.setState({
-      list
-    });
+    // const list = [...this.state.list];
+    // list.splice(index, 1);
+    // this.setState({
+    //   list
+    // });
+    this.setState(prevState => {
+      const list = [...prevState.list]
+      list.splice(index, 1)
+      return {
+        list
+      }
+    })
   }
 
   getTodoItems () {
