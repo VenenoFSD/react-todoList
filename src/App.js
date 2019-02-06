@@ -23,4 +23,4 @@ export default App;
 //                              }
 // 6. dangerouslySetInnerHTML={{__html: ...}}：相当于 Vue 中的 v-html=...
 // 7. label 标签的 for 属性应写为 htmlFor
-// 8. this.setState({...})新写法：this.setState((prevState, prevProps) => ({...}))，不过应注意该函数是异步函数
+// 8. this.setState({...})新写法：this.setState((prevState, prevProps) => ({...})[, callback])，不过应注意该函数是异步函数
